@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa Geográfica</title>
+</head>
+<body>
+    <h1>Pesquisa sobre nacionalidade</h1>
+    Em qual país você nasceu? <input type="text" name="pais" id="pais">
+    <input type="button" value="enviar" onclick="resposta()"> 
+    <div id="res"></div>
+
+    <script>
+
+        function resposta() {
+            var pais = document.getElementById('pais')
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Seu país é <strong>${pais.value}</strong></p>`
+
+            if (pais.value === 'Brasil') {
+                res.innerHTML += '<p>Então você é <STRONG>BRASILEIRO!</STRONG></p>'
+            } else {
+                res.innerHTML += '<p>Então você é <strong>ESTRANGEIRO!</strong></p>'
+            }
+
+        }
+    </script>
+</body>
+</html>
